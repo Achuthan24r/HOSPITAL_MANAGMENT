@@ -1,0 +1,125 @@
+.stat-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: transparent;
+  transition: var(--transition);
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.color-scheme-blue .stat-icon-wrapper {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+.color-scheme-blue:hover::before {
+  background: var(--primary);
+}
+
+.color-scheme-emerald .stat-icon-wrapper {
+  background: var(--accent-emerald-light);
+  color: var(--accent-emerald);
+}
+.color-scheme-emerald:hover::before {
+  background: var(--accent-emerald);
+}
+
+.color-scheme-amber .stat-icon-wrapper {
+  background: var(--accent-amber-light);
+  color: var(--accent-amber);
+}
+.color-scheme-amber:hover::before {
+  background: var(--accent-amber);
+}
+
+.color-scheme-violet .stat-icon-wrapper {
+  background: var(--accent-violet-light);
+  color: var(--accent-violet);
+}
+.color-scheme-violet:hover::before {
+  background: var(--accent-violet);
+}
+
+.stat-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.stat-title {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.stat-icon-wrapper {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.stat-card-main {
+  margin-bottom: 12px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  line-height: 1;
+}
+
+.stat-card-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+}
+
+.stat-trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.stat-trend.positive {
+  color: var(--accent-emerald);
+  background: var(--accent-emerald-light);
+}
+
+.stat-trend.negative {
+  color: var(--accent-rose);
+  background: var(--accent-rose-light);
+}
+
+.stat-subtext {
+  color: var(--text-muted);
+}
